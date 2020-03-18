@@ -1,5 +1,5 @@
 export const setTextFilter = (text = "") => ({
-  type: "SET_TEXT_FiLTER",
+  type: "SET_TEXT_FILTER",
   text
 });
 //sort
@@ -15,6 +15,6 @@ export const setStartDate = startDate => ({
   startDate
 });
 export const setEndDate = endDate => ({
-  type: "SET_START_DATE",
+  type: "SET_END_DATE",
   endDate
 });
