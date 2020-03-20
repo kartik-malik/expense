@@ -15,4 +15,5 @@ const database = firebase.database();
 // database.ref().set({
 //   name: "kartik"
 // });
-export { firebase, database as default };
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+export { firebase, database as default, googleAuthProvider };
