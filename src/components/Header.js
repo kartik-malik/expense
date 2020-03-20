@@ -12,12 +12,7 @@ const Header = ({ dispatch }) => {
       <NavLink activeClassName="is-active" to="/create" exact>
         create{" "}
       </NavLink>
-      <NavLink activeClassName="is-active" to="/help" exact>
-        help{" "}
-      </NavLink>
-      <NavLink activeClassName="is-active" to="/edit" exact>
-        edit{" "}
-      </NavLink>
+
       <button onClick={dispatch(startLogOut)}>Log Out</button>
     </header>
   );
