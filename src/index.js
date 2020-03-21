@@ -11,6 +11,9 @@ import configStore from "./store/configStore";
 import getVisibleExpenses from "./selectors/expenses";
 import { history } from "./routers/AppRouter";
 import { firebase } from "./firebase/firebase";
+import LoadingPage from "./components/LoadingPage";
+import "normalize.css/normalize.css";
+import "./styles/styles.scss";
 const store = configStore();
 // store.dispatch(addExpense({ description: "water", amount: 1000 }));
 // store.dispatch(addExpense({ description: "bill", amount: 500 }));
@@ -33,7 +36,7 @@ function renderApp() {
   }
 }
 
-ReactDOM.render(<p>loading</p>, document.getElementById("root"));
+ReactDOM.render(<LoadingPage />, document.getElementById("root"));
 
 firebase.auth().onAuthStateChanged(user => {
   if (user) {

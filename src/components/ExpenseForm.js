@@ -59,22 +59,25 @@ export default class ExpenseForm extends Component {
     } = this.state;
     return (
       <div>
-        {error && <p>{error}</p>}
-        <form onSubmit={this.onSubmit}>
+        {error && <p className="form__error">{error}</p>}
+        <form onSubmit={this.onSubmit} className="form">
           <input
             type="text"
             placeholder="desc"
             autoFocus
             value={description}
             onChange={this.onDescriptionChange}
+            className="text-input"
           />
           <input
             type="text"
             placeholder="amount"
             value={amount}
             onChange={this.onAmountChange}
+            className="text-input"
           />
           <SingleDatePicker
+            className="text-input"
             date={createdAt}
             onDateChange={this.onDateChange}
             onFocusChange={this.onFocusChange}
@@ -86,9 +89,11 @@ export default class ExpenseForm extends Component {
             placeholder="note"
             onChange={this.onNoteChange}
             value={note}
+            className="textarea"
           />
-
-          <button>submit</button>
+          <div>
+            <button className="button">submit</button>
+          </div>
         </form>
       </div>
     );
